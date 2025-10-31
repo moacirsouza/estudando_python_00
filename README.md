@@ -2,17 +2,19 @@
 
 Registro de atividades.
 
-## Alunos
+## Aluno(s)
 
 1. [Veronica](https://github.com/vpavianisampaio)
 
 ## Material
 
 - [Curso de Python do Pyhton Institute](https://edube.org/study/pe1)
+- [Curso de Python do CISCO NetAcademy](https://www.netacad.com/launch?id=da0847b7-e6fc-4597-bc31-38ddd6b07a2e&tab=curriculum&view=a5d7d1ec-7047-5c6a-a377-703df83d06b4)
 
 ## Histórico das aulas
 
 | Tópico | Data |
 |--------|------|
 | [1.1.1.3 Programming - absolute basics](https://edube.org/learn/pe-1/programming-absolute-basics-11) | 31/10/2025 |
+|        |      |
 
