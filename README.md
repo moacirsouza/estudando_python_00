@@ -13,8 +13,11 @@ Registro de atividades.
 
 ## Histórico das aulas
 
+**ATENÇÃO:** Primeiro realizar o _log-in_ no [Edube](https://edube.org/login)
+
 | Tópico | Data |
 |--------|------|
 | [1.1.1.3 Programming - absolute basics](https://edube.org/learn/pe-1/programming-absolute-basics-11) | 31/10/2025 |
-| [ 1.1.1.5 Programming - absolute basics \| Compilation vs. interpretation ](https://edube.org/learn/pe-1/programming-absolute-basics-compilation-vs-interpretation-10) | 07/11/2025 |
+| [1.1.1.5 Programming - absolute basics \| Compilation vs. interpretation](https://edube.org/learn/pe-1/programming-absolute-basics-compilation-vs-interpretation-10) | 07/11/2025 |
+| [1.2.1.3 Begin your Python journey](https://edube.org/learn/pe-1/begin-your-python-journey-23) | 10/11/2025 |
 
