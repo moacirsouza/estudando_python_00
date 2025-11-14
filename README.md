@@ -21,4 +21,4 @@ Registro de atividades.
 | [1.1.1.5 Programming - absolute basics \| Compilation vs. interpretation](https://edube.org/learn/pe-1/programming-absolute-basics-compilation-vs-interpretation-10) | 07/11/2025 |
 | [1.2.1.3 Begin your Python journey](https://edube.org/learn/pe-1/begin-your-python-journey-23) | 10/11/2025 |
 | [1.2.1.5 Begin your Python journey](https://edube.org/learn/pe-1/begin-your-python-journey-25) | 12/11/2025 |
-
+| [PE 1 -- Module 1 Test](https://edube.org/quiz/pe-1/pe1-module-1-test-1) | 14/11/2025 |
