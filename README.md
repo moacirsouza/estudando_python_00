@@ -23,3 +23,4 @@ Registro de atividades.
 | [1.2.1.5 Begin your Python journey](https://edube.org/learn/pe-1/begin-your-python-journey-25) | 12/11/2025 |
 | [PE 1 -- Module 1 Test](https://edube.org/quiz/pe-1/pe1-module-1-test-1) | 14/11/2025 |
 | [2.1.1.5 Your first program](https://edube.org/learn/pe-1/your-first-program-42) | 17/11/2025 |
+| [2.1.1.9 Your very first program](https://edube.org/learn/pe-1/your-very-first-program-35) | 19/11/2025 |
