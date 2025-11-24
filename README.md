@@ -25,3 +25,4 @@ Registro de atividades.
 | [2.1.1.5 Your first program](https://edube.org/learn/pe-1/your-first-program-42) | 17/11/2025 |
 | [2.1.1.9 Your very first program](https://edube.org/learn/pe-1/your-very-first-program-35) | 19/11/2025 |
 | [2.1.1.17 Your very first program](https://edube.org/learn/pe-1/your-very-first-program-43) | 21/11/2025 |
+| [2.2.1.1 Python literals](https://edube.org/learn/pe-1/python-literals-30) | 24/11/2025 |
