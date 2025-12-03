@@ -27,3 +27,4 @@ Registro de atividades.
 | [2.1.1.17 Your very first program](https://edube.org/learn/pe-1/your-very-first-program-43) | 21/11/2025 |
 | [2.2.1.1 Python literals](https://edube.org/learn/pe-1/python-literals-30) | 24/11/2025 |
 | [2.2.1.6 Python literals](https://edube.org/learn/pe-1/python-literals-35) | 01/12/2025 |
+| [2.3.1.1 Operators - data manipulation tools](https://edube.org/learn/pe-1/operators-data-manipulation-tools-29) | 03/12/2025 |
