@@ -1,0 +1,7 @@
+print('"I\'m"\n""learning""\n"""Python"""')
+print("")
+print('"I\'m"', '""learning""', '"""Python"""', sep="\n")
+print("")
+print("\"I'm\"\n\"\"learning\"\"\n\"\"\"Python\"\"\"")
+print("")
+print("\"I'm\"", "\"\"learning\"\"", "\"\"\"Python\"\"\"", sep="\n")
