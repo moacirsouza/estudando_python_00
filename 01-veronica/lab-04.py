@@ -1,0 +1,21 @@
+print("     *\n","   * *\n","  *   *\n"," *     *\n","***   ***\n","  *   *\n", "  *   *\n","  *****\n")
+#para reduzir a quantidade de linhas e prints, usamos \n no final de cada argumento
+print("     *")
+print("    * *")
+print("   *   *")
+print("  *     *")
+print(" ***   ***")
+print("   *   *")
+print("   *   *")
+print("   *****")
+
+# podemos multiplicar uma string por 2 usando *2
+print(" ")
+print("    *    "*2)
+print("   * *   "*2)
+print("  *   *  "*2)
+print(" *     * "*2)
+print("***   ***"*2)
+print("  *   *  "*2)
+print("  *   *  "*2)
+print("  *****  "*2)
