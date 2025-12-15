@@ -31,3 +31,4 @@ Registro de atividades.
 | [2.3.1.3 Operators - data manipulation tools](https://edube.org/learn/pe-1/operators-data-manipulation-tools-31) | 05/12/2025 |
 | [2.3.1.5 Operators - data manipulation tools](https://edube.org/learn/pe-1/operators-data-manipulation-tools-33) | 08/12/2025 |
 | [2.4.1.1 Variables - data-shaped boxes](https://edube.org/learn/pe-1/variables-data-shaped-boxes-20) | 10/12/2025 |
+| [2.4.1.6 Variables - data-shaped boxes](https://edube.org/learn/pe-1/variables-data-shaped-boxes-25) | 15/12/2025 |
