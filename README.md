@@ -46,4 +46,5 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [2.5.1.1 A comment on comments](https://edube.org/learn/pe-1/a-comment-on-comments-3) | - | 19/12/2025 |
 | [ 2.6.1.6 How to talk to a computer: string operators](https://edube.org/learn/pe-1/how-to-talk-to-a-computer-string-operators-9) | - | 22/12/2025 |
 | [2.6.1.11 LAB: Operators and expressions](https://edube.org/learn/pe-1/lab-operators-and-expressions-11) | - | 26/12/2025 |
+| [2.6.1.12 SECTION SUMMARY](https://edube.org/learn/pe-1/section-summary-77) | - | 29/12/2025 |
 
