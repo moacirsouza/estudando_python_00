@@ -14,4 +14,5 @@
 | [lab-09.py](lab-09.py) | [2.6.1.9 LAB: Simple input and output](https://edube.org/learn/pe-1/lab-simple-input-and-output-3) |
 | [lab-10.py](lab-10.py) | [2.6.1.10 LAB: Operators and expressions](https://edube.org/learn/pe-1/lab-operators-and-expressions-10) |
 | [lab-11.py](lab-11.py) | [2.6.1.11 LAB: Operators and expressions](https://edube.org/learn/pe-1/lab-operators-and-expressions-11) |
+| [lab-12.py](lab-12.py) | [3.1.1.4 LAB: Questions and answers](https://edube.org/learn/pe-1/lab-questions-and-answers-3) |
 
