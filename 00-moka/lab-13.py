@@ -1,13 +1,14 @@
 ### Valores de referência
-# +---------------+---------------------------------------+
-# |     Input     |            Expected Output            |
-# +---------------+---------------------------------------+
-# | spathiphyllum |       No, I want a big Spathiphyllum! |
-# +---------------+---------------------------------------+
-# | pelargonium   |       Spathiphyllum! Not pelargonium! |
-# +---------------+---------------------------------------+
-# | Spathiphyllum | Spathiphyllum is the best plant ever! |
-# +---------------+---------------------------------------+
+###
+### +---------------+---------------------------------------+
+### |     Input     |            Expected Output            |
+### +---------------+---------------------------------------+
+### | spathiphyllum |       No, I want a big Spathiphyllum! |
+### +---------------+---------------------------------------+
+### | pelargonium   |       Spathiphyllum! Not pelargonium! |
+### +---------------+---------------------------------------+
+### | Spathiphyllum | Spathiphyllum is the best plant ever! |
+### +---------------+---------------------------------------+
 
 plant_name = input("What's your favourite plant? ")
 
