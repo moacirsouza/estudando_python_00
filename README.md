@@ -50,4 +50,5 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [3.1.1.4 LAB: Questions and answers](https://edube.org/learn/pe-1/lab-questions-and-answers-3) | - | 02/01/2026 |
 | [3.1.1.8 Making decisions in Python](https://edube.org/learn/pe-1/making-decisions-in-python-30) | - | 09/01/2026 |
 | [3.1.1.11 LAB: Essentials of the if-else statement](https://edube.org/learn/pe-1/lab-essentials-of-the-if-else-statement-3) | - | 12/01/2026 |
+| [3.1.1.13 SECTION SUMMARY (1/2)](https://edube.org/learn/pe-1/section-summary-1-2-6) | - | 16/01/2026 |
 
