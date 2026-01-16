@@ -17,3 +17,4 @@
 | [lab-12.py](lab-12.py) | [3.1.1.4 LAB: Questions and answers](https://edube.org/learn/pe-1/lab-questions-and-answers-3) |
 | [lab-13.py](lab-13.py) | [3.1.1.10 LAB: Comparison operators and conditional execution](https://edube.org/learn/pe-1/lab-comparison-operators-and-conditional-execution-3) |
 | [lab-14.py](lab-14.py) | [3.1.1.11 LAB: Essentials of the if-else statement](https://edube.org/learn/pe-1/lab-essentials-of-the-if-else-statement-3) |
+| [lab-15.py](lab-15.py) | [3.1.1.12 LAB: Essentials of the if-elif-else statement](https://edube.org/learn/pe-1/lab-essentials-of-the-if-elif-else-statement-3) |
