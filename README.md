@@ -54,4 +54,5 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [3.2.1.1 Loops in Python \| while](https://edube.org/learn/pe-1/loops-in-python-while-7) | An infinite loop | 19/01/2026 |
 | [3.2.1.3 LAB: Essentials of the while loop - Guess the secret number](https://edube.org/learn/pe-1/lab-essentials-of-the-while-loop-guess-the-secret-number-3) | - | 21/01/2026 |
 | [3.2.1.6 LAB: Essentials of the for loop – counting mississippily](https://edube.org/learn/pe-1/lab-essentials-of-the-for-loop-counting-mississippily-3) | - | 23/01/2026 |
+| [3.2.1.9 LAB: The break statement - Stuck in a loop](https://edube.org/learn/pe-1/lab-the-break-statement-stuck-in-a-loop-3) | - | 26/01/2026 |
 
