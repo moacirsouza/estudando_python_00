@@ -19,3 +19,4 @@
 | [lab-14.py](lab-14.py) | [3.1.1.11 LAB: Essentials of the if-else statement](https://edube.org/learn/pe-1/lab-essentials-of-the-if-else-statement-3) |
 | [lab-15.py](lab-15.py) | [3.1.1.12 LAB: Essentials of the if-elif-else statement](https://edube.org/learn/pe-1/lab-essentials-of-the-if-elif-else-statement-3) |
 | [lab-16.py](lab-16.py) | [3.2.1.3 LAB: Essentials of the while loop - Guess the secret number](https://edube.org/learn/pe-1/lab-essentials-of-the-while-loop-guess-the-secret-number-3) |
+| [lab-17.py](lab-17.py) | [3.2.1.6 LAB: Essentials of the for loop – counting mississippily](https://edube.org/learn/pe-1/lab-essentials-of-the-for-loop-counting-mississippily-3) |
