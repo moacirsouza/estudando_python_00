@@ -20,3 +20,5 @@
 | [lab-15.py](lab-15.py) | [3.1.1.12 LAB: Essentials of the if-elif-else statement](https://edube.org/learn/pe-1/lab-essentials-of-the-if-elif-else-statement-3) |
 | [lab-16.py](lab-16.py) | [3.2.1.3 LAB: Essentials of the while loop - Guess the secret number](https://edube.org/learn/pe-1/lab-essentials-of-the-while-loop-guess-the-secret-number-3) |
 | [lab-17.py](lab-17.py) | [3.2.1.6 LAB: Essentials of the for loop – counting mississippily](https://edube.org/learn/pe-1/lab-essentials-of-the-for-loop-counting-mississippily-3) |
+| [lab-18.py](lab-18.py) | [3.2.1.9 LAB: The break statement - Stuck in a loop](https://edube.org/learn/pe-1/lab-the-break-statement-stuck-in-a-loop-3) |
+| [lab-19.py](lab-19.py) | [3.2.1.10 LAB: The continue statement - the Ugly Vowel Eater](https://edube.org/learn/pe-1/lab-the-continue-statement-the-ugly-vowel-eater-3) |
