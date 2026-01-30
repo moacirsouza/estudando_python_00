@@ -56,3 +56,4 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [3.2.1.6 LAB: Essentials of the for loop – counting mississippily](https://edube.org/learn/pe-1/lab-essentials-of-the-for-loop-counting-mississippily-3) | - | 23/01/2026 |
 | [3.2.1.9 LAB: The break statement - Stuck in a loop](https://edube.org/learn/pe-1/lab-the-break-statement-stuck-in-a-loop-3) | - | 26/01/2026 |
 | [3.2.1.11 LAB: The continue statement - the Pretty Vowel Eater](https://edube.org/learn/pe-1/lab-the-continue-statement-the-pretty-vowel-eater-3) | - | 28/01/2026 |
+| [3.2.1.13 Python loops \| else](https://edube.org/learn/pe-1/python-loops-else-7) | - | 30/01/2026 |
