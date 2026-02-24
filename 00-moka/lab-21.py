@@ -1,16 +1,13 @@
 blocks = int(input("Enter the number of blocks: "))
 
-layer=0
+height = 0
 
-for block in range(blocks):
-    layer += (block+1)
+while True:
+  height += 1
+  next_layer = height + 1
+  blocks -= next_layer
 
-    # print("Uma pirâmide de altura", block+1, "tem, no máximo,", layer, "bloco(s).")
-    blocks_left = blocks - layer
-    # print(blocks_left)
-    
-    if blocks_left < 0:
-        height = block
-        break
+  if blocks <= 0:
+    break
 
 print("The height of the pyramid:", height)
