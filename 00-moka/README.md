@@ -23,4 +23,5 @@
 | [lab-18.py](lab-18.py) | [3.2.1.9 LAB: The break statement - Stuck in a loop](https://edube.org/learn/pe-1/lab-the-break-statement-stuck-in-a-loop-3) |
 | [lab-19.py](lab-19.py) | [3.2.1.10 LAB: The continue statement - the Ugly Vowel Eater](https://edube.org/learn/pe-1/lab-the-continue-statement-the-ugly-vowel-eater-3) |
 | [lab-20.py](lab-20.py) | [3.2.1.11 LAB: The continue statement - the Pretty Vowel Eater](https://edube.org/learn/pe-1/lab-the-continue-statement-the-pretty-vowel-eater-3) |
-| [lab-21.py](lab-21.py) | [ 3.2.1.14 LAB: Essentials of the while loop](https://edube.org/learn/pe-1/lab-essentials-of-the-while-loop-3) |
+| [lab-21.py](lab-21.py) | [3.2.1.14 LAB: Essentials of the while loop](https://edube.org/learn/pe-1/lab-essentials-of-the-while-loop-3) |
+| [lab-22.py](lab-22.py) | [3.2.1.15 LAB: Collatz's hypothesis](https://edube.org/learn/pe-1/lab-collatz-s-hypothesis-3) |
