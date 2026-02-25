@@ -59,3 +59,4 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [3.2.1.13 Python loops \| else](https://edube.org/learn/pe-1/python-loops-else-7) | - | 30/01/2026 |
 | [3.2.1.14 LAB: Essentials of the while loop](https://edube.org/learn/pe-1/lab-essentials-of-the-while-loop-3) | - | 02/02/2026 |
 | [3.2.1.15 LAB: Collatz's hypothesis](https://edube.org/learn/pe-1/lab-collatz-s-hypothesis-3) | - | 23/02/2026 |
+| [3.2.1.16 SECTION SUMMARY (1/2)](https://edube.org/learn/pe-1/section-summary-1-2-7) | - | 25/02/2026 |
