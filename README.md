@@ -64,3 +64,4 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [3.3.1.2 Logic and bit operations in Python \| and, or, not](https://edube.org/learn/pe-1/logic-and-bit-operations-in-python-and-or-not-7) | - | 04/03/2026 |
 | [3.3.1.3 Logic and bit operations in Python](https://edube.org/learn/pe-1/logic-and-bit-operations-in-python-3) | - | 09/03/2026 |
 | [3.3.1.5 Logic and bit operations in Python \| Bit shifting](https://edube.org/learn/pe-1/logic-and-bit-operations-in-python-bit-shifting-3) | - | 11/03/2026 |
+| [3.3.1.6 SECTION SUMMARY](https://edube.org/learn/pe-1/section-summary-78) | - | 13/03/2026 |
