@@ -66,3 +66,4 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [3.3.1.5 Logic and bit operations in Python \| Bit shifting](https://edube.org/learn/pe-1/logic-and-bit-operations-in-python-bit-shifting-3) | - | 11/03/2026 |
 | [3.3.1.6 SECTION SUMMARY](https://edube.org/learn/pe-1/section-summary-78) | - | 13/03/2026 |
 | [3.4.1.3 Lists - collections of data \| Indexing](https://edube.org/learn/pe-1/lists-collections-of-data-indexing-7) | - | 16/03/2026 |
+| [3.4.1.9 Lists - collections of data \| list methods](https://edube.org/learn/pe-1/lists-collections-of-data-list-methods-7) | - | 18/03/2026 |
