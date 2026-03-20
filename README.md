@@ -67,3 +67,4 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [3.3.1.6 SECTION SUMMARY](https://edube.org/learn/pe-1/section-summary-78) | - | 13/03/2026 |
 | [3.4.1.3 Lists - collections of data \| Indexing](https://edube.org/learn/pe-1/lists-collections-of-data-indexing-7) | - | 16/03/2026 |
 | [3.4.1.9 Lists - collections of data \| list methods](https://edube.org/learn/pe-1/lists-collections-of-data-list-methods-7) | - | 18/03/2026 |
+| [3.4.1.12 Lists ‒ collections of data \| lists and loops](https://edube.org/learn/pe-1/lists-collections-of-data-lists-and-loops-11) | - | 20/03/2026 |
