@@ -26,3 +26,4 @@
 | [lab-21.py](lab-21.py) | [3.2.1.14 LAB: Essentials of the while loop](https://edube.org/learn/pe-1/lab-essentials-of-the-while-loop-3) |
 | [lab-22.py](lab-22.py) | [3.2.1.15 LAB: Collatz's hypothesis](https://edube.org/learn/pe-1/lab-collatz-s-hypothesis-3) |
 | [lab-23.py](lab-23.py) | [3.4.1.6 LAB: The basics of lists](https://edube.org/learn/pe-1/lab-the-basics-of-lists-3) |
+| [lab-24.py](lab-24.py) | [3.4.1.13 LAB: The basics of lists - the Beatles](https://edube.org/learn/pe-1/lab-the-basics-of-lists-the-beatles-3) |
