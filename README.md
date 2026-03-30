@@ -69,3 +69,4 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [3.4.1.9 Lists - collections of data \| list methods](https://edube.org/learn/pe-1/lists-collections-of-data-list-methods-7) | - | 18/03/2026 |
 | [3.4.1.12 Lists ‒ collections of data \| lists and loops](https://edube.org/learn/pe-1/lists-collections-of-data-lists-and-loops-11) | - | 20/03/2026 |
 | [3.4.1.14 SECTION SUMMARY](https://edube.org/learn/pe-1/section-summary-79) | - | 23/03/2026 |
+| [3.5.1.2 Sorting simple lists - the bubble sort algorithm](https://edube.org/learn/pe-1/sorting-simple-lists-the-bubble-sort-algorithm-10) | - | 30/03/2026 |
