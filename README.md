@@ -5,8 +5,8 @@ sextas-feiras, das 07:30 às 08:30.
 
 ## Material
 
-Usaremos o curso oficial do Python Institute, que pode ser encontrado em
-qualquer um dos endereços a seguir:
+Usaremos o curso oficial do Python Institute, que pode ser encontrado em um dos 
+endereços a seguir:
 
 - [Curso de Python do Pyhton Institute](https://edube.org/study/pe1)
 - [Curso de Python do CISCO NetAcademy](https://www.netacad.com/launch?id=da0847b7-e6fc-4597-bc31-38ddd6b07a2e&tab=curriculum&view=a5d7d1ec-7047-5c6a-a377-703df83d06b4)
