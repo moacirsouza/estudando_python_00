@@ -74,3 +74,4 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [3.6.1.3 Operations on lists \| slices](https://edube.org/learn/pe-1/operations-on-lists-slices-10) | - | 08/04/2026 | 
 | [3.6.1.7 Lists - more details](https://edube.org/learn/pe-1/lists-more-details-6) | - | 20/04/2026 |
 | [3.6.1.9 LAB: Operating with lists - basics](https://edube.org/learn/pe-1/lab-operating-with-lists-basics-3) | - | 22/04/2026 |
+| [3.7.1.1 Lists in advanced applications](https://edube.org/learn/pe-1/lists-in-advanced-applications-3) | - | 04/05/2026 |
