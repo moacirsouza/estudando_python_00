@@ -77,3 +77,5 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [3.7.1.1 Lists in advanced applications](https://edube.org/learn/pe-1/lists-in-advanced-applications-3) | - | 04/05/2026 |
 | [3.7.1.2 Lists in advanced applications \| Arrays](https://edube.org/learn/pe-1/lists-in-advanced-applications-arrays-12) | - | 06/05/2026 |
 | [3.7.1.5 Lists in advanced applications \| Arrays](https://edube.org/learn/pe-1/lists-in-advanced-applications-arrays-15) | - | 11/05/2026 |
+| [3.7.1.6 SECTION SUMMARY](https://edube.org/learn/pe-1/section-summary-82) | - | 15/05/2026 |
+| [Python Essentials 1: Module 4](https://edube.org/learn/pe-1/python-essentials-1-module-4-2) | - | 18/05/2026 |
