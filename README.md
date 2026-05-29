@@ -80,3 +80,5 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [3.7.1.6 SECTION SUMMARY](https://edube.org/learn/pe-1/section-summary-82) | - | 15/05/2026 |
 | [Python Essentials 1: Module 4](https://edube.org/learn/pe-1/python-essentials-1-module-4-2) | - | 18/05/2026 |
 | [4.1.1.2 Functions](https://edube.org/learn/pe-1/functions-11) | - | 22/05/2026 |
+| [4.1.1.6 SECTION SUMMARY](https://edube.org/learn/pe-1/section-summary-83) | - | 27/05/2026 |
+| [4.2.1.2 How functions communicate with their environment](https://edube.org/learn/pe-1/how-functions-communicate-with-their-environment-22) | - | 29/05/2026 |
