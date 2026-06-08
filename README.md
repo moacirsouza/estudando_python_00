@@ -84,3 +84,4 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [4.2.1.2 How functions communicate with their environment](https://edube.org/learn/pe-1/how-functions-communicate-with-their-environment-22) | - | 29/05/2026 |
 | [4.2.1.4 How functions communicate with their environment](https://edube.org/learn/pe-1/how-functions-communicate-with-their-environment-24) | - | 01/06/2026 |
 | [4.3.1.1 Returning a result from a function](https://edube.org/learn/pe-1/returning-a-result-from-a-function-15) | - | 05/06/2026 |
+| [4.3.1.6 LAB: A leap year: writing your own functions](https://edube.org/learn/pe-1/lab-a-leap-year-writing-your-own-functions-2) | - | 08/06/2026 |
