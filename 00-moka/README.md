@@ -28,3 +28,4 @@
 | [lab-23.py](lab-23.py) | [3.4.1.6 LAB: The basics of lists](https://edube.org/learn/pe-1/lab-the-basics-of-lists-3) |
 | [lab-24.py](lab-24.py) | [3.4.1.13 LAB: The basics of lists - the Beatles](https://edube.org/learn/pe-1/lab-the-basics-of-lists-the-beatles-3) |
 | [lab-25.py](lab-25.py) | [3.6.1.9 LAB: Operating with lists - basics](https://edube.org/learn/pe-1/lab-operating-with-lists-basics-3) |
+| [lab-26.py](lab-26.py) | [4.3.1.6 LAB: A leap year: writing your own functions](https://edube.org/learn/pe-1/lab-a-leap-year-writing-your-own-functions-2) |
