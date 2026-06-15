@@ -44,7 +44,7 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [2.4.1.6 Variables - data-shaped boxes](https://edube.org/learn/pe-1/variables-data-shaped-boxes-25) | - | 15/12/2025 |
 | [2.4.1.10 LAB: Operators and expressions](https://edube.org/learn/pe-1/lab-operators-and-expressions-9) | - | 17/12/2025 |
 | [2.5.1.1 A comment on comments](https://edube.org/learn/pe-1/a-comment-on-comments-3) | - | 19/12/2025 |
-| [ 2.6.1.6 How to talk to a computer: string operators](https://edube.org/learn/pe-1/how-to-talk-to-a-computer-string-operators-9) | - | 22/12/2025 |
+| [2.6.1.6 How to talk to a computer: string operators](https://edube.org/learn/pe-1/how-to-talk-to-a-computer-string-operators-9) | - | 22/12/2025 |
 | [2.6.1.11 LAB: Operators and expressions](https://edube.org/learn/pe-1/lab-operators-and-expressions-11) | - | 26/12/2025 |
 | [2.6.1.12 SECTION SUMMARY](https://edube.org/learn/pe-1/section-summary-77) | - | 29/12/2025 |
 | [3.1.1.4 LAB: Questions and answers](https://edube.org/learn/pe-1/lab-questions-and-answers-3) | - | 02/01/2026 |
@@ -86,4 +86,5 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [4.3.1.1 Returning a result from a function](https://edube.org/learn/pe-1/returning-a-result-from-a-function-15) | - | 05/06/2026 |
 | [4.3.1.6 LAB: A leap year: writing your own functions](https://edube.org/learn/pe-1/lab-a-leap-year-writing-your-own-functions-2) | - | 08/06/2026 |
 | [4.3.1.7 LAB: How many days: writing and using your own functions](https://edube.org/learn/pe-1/lab-how-many-days-writing-and-using-your-own-functions-2) | - | 10/06/2026 |
+| [4.3.1.8 LAB: Day of the year: writing and using your own functions](https://edube.org/learn/pe-1/lab-day-of-the-year-writing-and-using-your-own-functions-2) | - | 15/06/2026 |
 
