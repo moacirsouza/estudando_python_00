@@ -30,4 +30,5 @@
 | [lab-25.py](lab-25.py) | [3.6.1.9 LAB: Operating with lists - basics](https://edube.org/learn/pe-1/lab-operating-with-lists-basics-3) |
 | [lab-26.py](lab-26.py) | [4.3.1.6 LAB: A leap year: writing your own functions](https://edube.org/learn/pe-1/lab-a-leap-year-writing-your-own-functions-2) |
 | [lab-27.py](lab-27.py) | [4.3.1.7 LAB: How many days: writing and using your own functions](https://edube.org/learn/pe-1/lab-how-many-days-writing-and-using-your-own-functions-2) |
+| [lab-28.py](lab-28.py) | [4.3.1.8 LAB: Day of the year: writing and using your own functions](https://edube.org/learn/pe-1/lab-day-of-the-year-writing-and-using-your-own-functions-2) |
 
