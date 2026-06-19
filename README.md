@@ -88,3 +88,5 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [4.3.1.7 LAB: How many days: writing and using your own functions](https://edube.org/learn/pe-1/lab-how-many-days-writing-and-using-your-own-functions-2) | - | 10/06/2026 |
 | [4.3.1.8 LAB: Day of the year: writing and using your own functions](https://edube.org/learn/pe-1/lab-day-of-the-year-writing-and-using-your-own-functions-2) | - | 15/06/2026 |
 | [4.3.1.8 LAB: Day of the year: writing and using your own functions](https://edube.org/learn/pe-1/lab-day-of-the-year-writing-and-using-your-own-functions-2) | - | 17/06/2026 |
+| [4.3.1.9 LAB: Prime numbers - how to find them](https://edube.org/learn/pe-1/lab-prime-numbers-how-to-find-them-2) | - | 19/06/2026 |
+
