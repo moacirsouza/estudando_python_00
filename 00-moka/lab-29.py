@@ -2,7 +2,7 @@ def is_prime(num):
   result = True
 
   for divisor in range(2, num):
-    if num%divisor == 0:
+    if num % divisor == 0:
       result = False
       break
   
