@@ -92,4 +92,5 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [4.4.1.1 Scopes in Python](https://edube.org/learn/pe-1/scopes-in-python-9) | - | 24/06/2026 |
 | [4.4.1.4 Scopes in Python](https://edube.org/learn/pe-1/scopes-in-python-11) | - | 29/06/2026 |
 | [4.5.1.2 Creating functions \| two-parameter functions](https://edube.org/learn/pe-1/creating-functions-two-parameter-functions-7) | - | 01/07/2026 |
+| [4.5.1.6 Creating functions: factorials](https://edube.org/learn/pe-1/creating-functions-factorials-3) | - | 03/07/2026 |
 
