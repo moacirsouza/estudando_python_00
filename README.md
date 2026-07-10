@@ -95,4 +95,5 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [4.5.1.6 Creating functions: factorials](https://edube.org/learn/pe-1/creating-functions-factorials-3) | - | 03/07/2026 |
 | [4.5.1.9 SECTION SUMMARY](https://edube.org/learn/pe-1/section-summary-87) | - | 06/07/2026 | 
 | [4.6.1.4 Tuples and dictionaries](https://edube.org/learn/pe-1/tuples-and-dictionaries-24) | How to make a dictionary? | 08/07/2026 |
+| [4.6.1.6 Tuples and dictionaries \| methods](https://edube.org/learn/pe-1/tuples-and-dictionaries-methods-6) | - | 10/07/2026 |
 
