@@ -98,4 +98,4 @@ preciso realizar o _log-in_ no [Edube](https://edube.org/login)
 | [4.6.1.6 Tuples and dictionaries \| methods](https://edube.org/learn/pe-1/tuples-and-dictionaries-methods-6) | - | 10/07/2026 |
 | [4.6.1.8 Tuples and dictionaries](https://edube.org/learn/pe-1/tuples-and-dictionaries-26) | Removing a key | 13/07/2026 |
 | [4.6.1.11 SECTION SUMMARY (2/3)](https://edube.org/learn/pe-1/section-summary-2-3-4) | - | 15/07/2026 |
-
+| [4.7.1.1 Exceptions](https://edube.org/learn/pe-1/exceptions-7) | - | 17/07/2026 |
