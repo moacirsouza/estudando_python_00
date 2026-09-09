@@ -1,4 +1,5 @@
 import os
+from random import randrange
 
 xis = 'X'
 circulo = 'O'
@@ -14,7 +15,7 @@ erro_posicao_incorreta="The value must be between 1 and 9. Try again!"
 enter_para_continuar="[Press ENTER to CONTINUE]"
 
 board = [
-          [1, 2, circulo],
+          [1, 2, 3],
           [4, xis, 6],
           [7, 8, 9]
         ]
@@ -55,6 +56,7 @@ def meio():
 def display_board(board):
 # The function accepts one parameter containing the board's current status
 # and prints it out to the console.
+  os.system('clear')
   ponta( board[0] )
   meio()
   ponta( board[2] )
@@ -74,16 +76,26 @@ def make_list_of_free_fields(board):
       if board[linha][coluna] in range(1, 10):
         free_fields.append((linha, coluna))
 
-  print(free_fields)
+  return free_fields
 
-  #free_fields = [(0, 0), (0, 1), (1, 0)]
-  #return free_fields
+
+def draw_move(board):
+## The function draws the computer's move and updates the board.
+  computer_play = make_list_of_free_fields( board )
+  bla = len(computer_play)
+  print("Jogadas possíveis:", computer_play)
+
+  pos = randrange(bla)
+  print("O computador escolheu:", computer_play[pos])
+  board[ computer_play[pos][0] ][ computer_play[pos][1] ] = xis
+  enter_move( board )
+
+
 
 def enter_move(board):
 # The function accepts the board's current status, asks the user about their move, 
 # checks the input, and updates the board according to the user's decision.
   while True:
-    make_list_of_free_fields( board )
     display_board(board)
     try:
       user_input = int(input("Enter your move: "))
@@ -112,16 +124,18 @@ def enter_move(board):
       else:
         os.system('clear')
         board[move_address[0]][move_address[1]] = circulo
-        continue
+        break
 
-      break
     except ValueError:
       os.system('clear')
       input(f"{prefixo_erro}You must choose an integer number!\n{enter_para_continuar}")
+      os.system('clear')
     except:
       input(f"{prefixo_erro}Uknown error. Please read the instructions.\n{enter_para_continuar}")
 
-  print("Funcionou")
+  display_board(board)
+  input("Jogada registrada.\nPressione [ENTER] para receber a jogada do computador")
+  draw_move( board )
 
 
 enter_move( board )
@@ -129,7 +143,4 @@ enter_move( board )
 #def victory_for(board, sign):
 ## The function analyzes the board's status in order to check if 
 ## the player using 'O's or 'X's has won the game
-#
-#
-#def draw_move(board):
-## The function draws the computer's move and updates the board.
+
