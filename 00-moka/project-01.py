@@ -1,8 +1,8 @@
 import os
 from random import randrange
 
-xis = 'X'
-circulo = 'O'
+xis = '✘'
+circulo = '◯'
 primeira_celula = 1
 ultima_celula = 9
 
@@ -21,36 +21,37 @@ board = [
         ]
 
 ## Exemplo de tabuleiro desenhado
-# +-------+-------+-------+
-# |       |       |       |
-# |   1   |   2   |   3   |
-# |       |       |       |
-# +-------+-------+-------+
-# |       |       |       |
-# |   4   |   5   |   6   |
-# |       |       |       |
-# +-------+-------+-------+
-# |       |       |       |
-# |   7   |   8   |   9   |
-# |       |       |       |
-# +-------+-------+-------+
+#         |       |
+#     1   |   2   |   3   
+#         |       |
+# --------+-------+--------
+#         |       |
+#     4   |   5   |   6   
+#         |       |
+# --------+-------+--------
+#         |       |
+#     7   |   8   |   9    
+#         |       |
 
 ## Tipos de linha
 # Linha 1: +-------+-------+-------+
 # Linha 2: |       |       |       |
 # Linha 3: |   1   |   2   |   3   |
 
-l1 = "+-------+-------+-------+"
-l2 = "|       |       |       |"
-l3 = "|   {0}   |   {1}   |   {2}   |"
+l1 = " -------+-------+-------"
+l2 = "        |       |       "
+l3 = "    {0}   |   {1}   |   {2}   "
 
 def ponta( indice_do_tabuleiro ):
   a, b, c = indice_do_tabuleiro
-  print(l1, l2, l3.format(a, b, c), l2, l1, sep="\n")
+  #print(l1, l2, l3.format(a, b, c), l2, l1, sep="\n")
+  print(l2, l3.format(a, b, c), l2, sep="\n")
 
 def meio():
   a, b, c = board[1]
-  print(l2, l3.format(a, b, c), l2, sep="\n")
+  #print(l2, l3.format(a, b, c), l2, sep="\n")
+  print(l1, l2, l3.format(a, b, c), l2, l1, sep="\n")
+  #print(l2, l3.format(a, b, c), l2, sep="\n")
 
 
 def display_board(board):
@@ -81,13 +82,13 @@ def make_list_of_free_fields(board):
 
 def draw_move(board):
 ## The function draws the computer's move and updates the board.
-  computer_play = make_list_of_free_fields( board )
-  bla = len(computer_play)
-  print("Jogadas possíveis:", computer_play)
+  possible_moves = make_list_of_free_fields( board )
+  bla = len(possible_moves)
+  #print("Jogadas possíveis:", possible_moves)
 
   pos = randrange(bla)
-  print("O computador escolheu:", computer_play[pos])
-  board[ computer_play[pos][0] ][ computer_play[pos][1] ] = xis
+  input(f"O computador escolheu: {board[possible_moves[pos][0]][possible_moves[pos][1]]}")
+  board[ possible_moves[pos][0] ][ possible_moves[pos][1] ] = xis
   enter_move( board )
 
 
@@ -102,7 +103,7 @@ def enter_move(board):
 
       ### Valida se o usuário digitou um número que existe no tabuleiro
       if user_input < primeira_celula or user_input > ultima_celula:
-        os.system('clear')
+        display_board(board)
         input(f"{prefixo_erro}{erro_posicao_incorreta}\n{enter_para_continuar}")
         os.system('clear')
         continue
@@ -117,21 +118,23 @@ def enter_move(board):
       move = board[ move_address[0] ][ move_address[1] ]
 
       if move == xis or move == circulo:
-        os.system('clear')
+        display_board(board)
         input(f"{prefixo_erro}Choose a field not yet used!\n{enter_para_continuar}")
         os.system('clear')
         continue
       else:
-        os.system('clear')
+        display_board(board)
         board[move_address[0]][move_address[1]] = circulo
         break
 
     except ValueError:
-      os.system('clear')
+      display_board(board)
       input(f"{prefixo_erro}You must choose an integer number!\n{enter_para_continuar}")
       os.system('clear')
     except:
+      display_board(board)
       input(f"{prefixo_erro}Uknown error. Please read the instructions.\n{enter_para_continuar}")
+      os.system('clear')
 
   display_board(board)
   input("Jogada registrada.\nPressione [ENTER] para receber a jogada do computador")
