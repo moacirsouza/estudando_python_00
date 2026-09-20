@@ -69,13 +69,15 @@ def draw_move(board):
   row = possible_moves[next_move][0]
   column = possible_moves[next_move][1]
 
+  # Stores the position of the computer move. This will be used to display the 
+  # value to the user BEFORE actually registering it to the board
   cpu_move = board[row][column]
-
-  board[row][column] = xis
   victory_for(board, xis)
 
-  input(f"O computador escolheu: {cpu_move}!\nContinuar > [ENTER]")
-  enter_move(board)
+  input(f"O computador vai jogar na posição [{cpu_move}]!\nContinuar > [ENTER]")
+  # Actually registers the computer move
+  board[row][column] = xis
+  #enter_move(board)
 
 
 # The function accepts the board's current status, asks the user about their 
@@ -109,9 +111,6 @@ def enter_move(board):
         continue
       else:
         board[move_address[0]][move_address[1]] = circulo
-       # if len(make_list_of_free_fields( board )) == 0:
-       #   print("O jogo empatou")
-       #   exit()
         break
 
     except ValueError:
@@ -119,8 +118,8 @@ def enter_move(board):
     except:
       input(f"\n{prefixo_erro}Unknown error. Please read the instructions.\n{enter_para_continuar}")
 
-  victory_for(board, circulo)
-  draw_move( board )
+  #victory_for(board, circulo)
+  #draw_move( board )
 
 # The function analyzes the board's status in order to check if 
 # the player using 'O's or 'X's has won the game
@@ -156,14 +155,14 @@ def victory_for(board, sign):
       venceu_vertical = True
       break
 
-  # Validação de vitória nas DIAGONAIS
-  ## Diagonal principal:  (0,0), (1, 1), (2, 2)
-  ## Diagonal secundária: (0,2), (1, 1), (2, 0)
   if sign == circulo:
     resultado_circulo = [venceu_horizontal, venceu_vertical]
   elif sign == xis:
     resultado_xis = [venceu_horizontal, venceu_vertical]
 
+    # Validação de vitória nas DIAGONAIS
+    # Diagonal principal:  (0, 0), (1, 1), (2, 2)
+    # Diagonal secundária: (0, 2), (1, 1), (2, 0)
     if (board[0][0] == xis and board[2][2] == xis) or\
        (board[0][2] == xis and board[2][0] == xis):
       resultado_xis = [True, True]
@@ -180,6 +179,10 @@ def victory_for(board, sign):
 
   if vencedor != None:
     input(f"O {vencedor} venceu!\nPressione [ENTER] para sair!")
+    exit()
+
+  if len(make_list_of_free_fields(board)) == 0:
+    input(f"O jogo empatou!\nPressione [ENTER] para sair!")
     exit()
 
 
@@ -204,4 +207,13 @@ def victory_for(board, sign):
 ## The function analyzes the board's status in order to check if 
 ## the player using 'O's or 'X's has won the game
 
-enter_move( board )
+
+def main():
+  while True:
+    enter_move(board)
+    victory_for(board, circulo)
+    draw_move(board)
+    victory_for(board, xis)
+
+
+main()
