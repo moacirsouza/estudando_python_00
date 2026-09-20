@@ -1,11 +1,8 @@
-import os
+from os import system, name
 from random import randrange
 
 xis = '✘'
 circulo = '◯'
-primeira_celula = 1
-ultima_celula = 9
-
 
 ### Variáveis com as mensagens de tratamento de erros e/ou alertas para o 
 ### usuário
@@ -20,82 +17,74 @@ board = [
           [7, 8, 9]
         ]
 
-## Exemplo de tabuleiro desenhado
-#         |       |
-#     1   |   2   |   3   
-#         |       |
-# --------+-------+--------
-#         |       |
-#     4   |   5   |   6   
-#         |       |
-# --------+-------+--------
-#         |       |
-#     7   |   8   |   9    
-#         |       |
 
-## Tipos de linha
-# Linha 1: +-------+-------+-------+
-# Linha 2: |       |       |       |
-# Linha 3: |   1   |   2   |   3   |
-
-l1 = " -------+-------+-------"
-l2 = "        |       |       "
-l3 = "    {0}   |   {1}   |   {2}   "
-
-def ponta( indice_do_tabuleiro ):
-  a, b, c = indice_do_tabuleiro
-  #print(l1, l2, l3.format(a, b, c), l2, l1, sep="\n")
-  print(l2, l3.format(a, b, c), l2, sep="\n")
-
-def meio():
-  a, b, c = board[1]
-  #print(l2, l3.format(a, b, c), l2, sep="\n")
-  print(l1, l2, l3.format(a, b, c), l2, l1, sep="\n")
-  #print(l2, l3.format(a, b, c), l2, sep="\n")
+# Clears the screen, using the appropriate command, according to the operating 
+# system type
+def clear_screen():
+  if name == "nt":
+    _ = system("cls")
+  else:
+    _ = system("clear")
 
 
+# The function accepts one parameter containing the board's current status and 
+# prints it out to the console.
 def display_board(board):
-# The function accepts one parameter containing the board's current status
-# and prints it out to the console.
-  os.system('clear')
-  ponta( board[0] )
-  meio()
-  ponta( board[2] )
+  clear_screen()
 
-# the user inputs their move by entering the number of the square they choose − 
-# the number must be valid, i.e., it must be an integer, it must be greater 
-# than 0 and less than 10, and it cannot point to a field which is already 
-# occupied;
+  l1 = "        |       |"
+  l2 = " -------+-------+-------"
+  l3 = "    {0}   |   {1}   |   {2}"
 
+  for i in range(3):
+    a, b, c = board[i]
+
+    if i != 1:
+      print(l1, l3.format(a, b, c), l1, sep="\n")
+    else:
+      print(l2, l1, l3.format(a, b, c), l1, l2, sep="\n")
+
+
+# The function browses the board and builds a list of all the free squares; the 
+# list consists of tuples, while each tuple is a pair of row and column 
+# numbers.
 def make_list_of_free_fields(board):
-# The function browses the board and builds a list of all the free squares; 
-# the list consists of tuples, while each tuple is a pair of row and column numbers.
   free_fields = []
 
-  for linha in range(3):
-    for coluna in range(3):
-      if board[linha][coluna] in range(1, 10):
-        free_fields.append((linha, coluna))
+  for row in range(3):
+    for column in range(3):
+      if board[row][column] in range(1, 10):
+        free_fields.append((row, column))
 
   return free_fields
 
 
+# The function draws the computer's move and updates the board.
 def draw_move(board):
-## The function draws the computer's move and updates the board.
-  possible_moves = make_list_of_free_fields( board )
-  bla = len(possible_moves)
-  #print("Jogadas possíveis:", possible_moves)
+  possible_moves = make_list_of_free_fields(board)
+  total_moves_left = len(possible_moves)
 
-  pos = randrange(bla)
-  input(f"O computador escolheu: {board[possible_moves[pos][0]][possible_moves[pos][1]]}")
-  board[ possible_moves[pos][0] ][ possible_moves[pos][1] ] = xis
-  enter_move( board )
+  next_move = randrange(total_moves_left)
+
+  row = possible_moves[next_move][0]
+  column = possible_moves[next_move][1]
+
+  cpu_move = board[row][column]
+
+  board[row][column] = xis
+  victory_for(board, xis)
+
+  input(f"O computador escolheu: {cpu_move}!\nContinuar > [ENTER]")
+  enter_move(board)
 
 
-
+# The function accepts the board's current status, asks the user about their 
+# move, checks the input, and updates the board according to the user's 
+# decision.
 def enter_move(board):
-# The function accepts the board's current status, asks the user about their move, 
-# checks the input, and updates the board according to the user's decision.
+  primeira_celula = 1
+  ultima_celula = 9
+
   while True:
     display_board(board)
     try:
@@ -103,9 +92,7 @@ def enter_move(board):
 
       ### Valida se o usuário digitou um número que existe no tabuleiro
       if user_input < primeira_celula or user_input > ultima_celula:
-        display_board(board)
         input(f"{prefixo_erro}{erro_posicao_incorreta}\n{enter_para_continuar}")
-        os.system('clear')
         continue
       else: ### Se o número existir, associa à variável 'move' a posição escolhida
         if user_input >= 1 and user_input <= 3:
@@ -118,32 +105,103 @@ def enter_move(board):
       move = board[ move_address[0] ][ move_address[1] ]
 
       if move == xis or move == circulo:
-        display_board(board)
         input(f"{prefixo_erro}Choose a field not yet used!\n{enter_para_continuar}")
-        os.system('clear')
         continue
       else:
-        display_board(board)
         board[move_address[0]][move_address[1]] = circulo
+       # if len(make_list_of_free_fields( board )) == 0:
+       #   print("O jogo empatou")
+       #   exit()
         break
 
     except ValueError:
-      display_board(board)
       input(f"{prefixo_erro}You must choose an integer number!\n{enter_para_continuar}")
-      os.system('clear')
     except:
-      display_board(board)
-      input(f"{prefixo_erro}Uknown error. Please read the instructions.\n{enter_para_continuar}")
-      os.system('clear')
+      input(f"\n{prefixo_erro}Unknown error. Please read the instructions.\n{enter_para_continuar}")
 
-  display_board(board)
-  input("Jogada registrada.\nPressione [ENTER] para receber a jogada do computador")
+  victory_for(board, circulo)
   draw_move( board )
 
+# The function analyzes the board's status in order to check if 
+# the player using 'O's or 'X's has won the game
+def victory_for(board, sign):
 
-enter_move( board )
+  display_board(board)
+  venceu_vertical = False
+  venceu_horizontal = False
+  resultado_circulo = [venceu_horizontal, venceu_vertical]
+  resultado_xis = [venceu_horizontal, venceu_vertical]
 
-#def victory_for(board, sign):
+  # Validação de vitória na HORIZONTAL
+  for row in board:
+    contador = 0
+    for cell in row:
+      if cell != sign:
+        break
+      contador += 1
+
+    if contador == 3:
+      venceu_horizontal = True
+      break
+
+  # Validação de vitória na VERTICAL
+  for row in range(3):
+    contador = 0
+    for column in range(3):
+      if board[column][row] != sign:
+        break
+      contador += 1
+
+    if contador == 3:
+      venceu_vertical = True
+      break
+
+  # Validação de vitória nas DIAGONAIS
+  ## Diagonal principal:  (0,0), (1, 1), (2, 2)
+  ## Diagonal secundária: (0,2), (1, 1), (2, 0)
+  if sign == circulo:
+    resultado_circulo = [venceu_horizontal, venceu_vertical]
+  elif sign == xis:
+    resultado_xis = [venceu_horizontal, venceu_vertical]
+
+    if (board[0][0] == xis and board[2][2] == xis) or\
+       (board[0][2] == xis and board[2][0] == xis):
+      resultado_xis = [True, True]
+  else:
+    print(f"O parâmetro {sign} não é reconhecido pelo programa")
+    print("Verifique a chamada da função victory_for() e tente novamente")
+
+  if True in resultado_circulo:
+    vencedor = "jogador"
+  elif True in resultado_xis:
+    vencedor = "computador"
+  else:
+    vencedor = None
+
+  if vencedor != None:
+    input(f"O {vencedor} venceu!\nPressione [ENTER] para sair!")
+    exit()
+
+
+#    # verificações verticais
+#    for i in range(0, 3, 2): # Checks only first and last rows (indices 0 and 2)
+#      circulo_venceu_horizontal = True
+#      for j in range(3):
+#        if board[i][j] != circulo:
+#          print(board[i][j], end=" ")
+#          circulo_venceu_horizontal = False
+#          break
+#        
+#        #print("vert", circulo_venceu_vertical)
+#        #if board[j][i] != circulo:
+#        #  #print(board[j][i], end=" ")
+#        #  circulo_venceu_vertical = False
+#
+#    # verificações horizontais
+#    #for i in range
+#
+
 ## The function analyzes the board's status in order to check if 
 ## the player using 'O's or 'X's has won the game
 
+enter_move( board )
