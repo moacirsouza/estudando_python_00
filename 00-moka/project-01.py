@@ -33,16 +33,16 @@ def display_board(board):
   clear_screen()
 
   l1 = "        |       |"
-  l2 = " -------+-------+-------"
-  l3 = "    {0}   |   {1}   |   {2}"
+  l2 = "    {0}   |   {1}   |   {2}"
+  l3 = " -------+-------+-------"
 
   for i in range(3):
     a, b, c = board[i]
 
     if i != 1:
-      print(l1, l3.format(a, b, c), l1, sep="\n")
+      print(l1, l2.format(a, b, c), l1, sep="\n")
     else:
-      print(l2, l1, l3.format(a, b, c), l1, l2, sep="\n")
+      print(l3, l1, l2.format(a, b, c), l1, l3, sep="\n")
 
 
 # The function browses the board and builds a list of all the free squares; the 
@@ -72,12 +72,11 @@ def draw_move(board):
   # Stores the position of the computer move. This will be used to display the 
   # value to the user BEFORE actually registering it to the board
   cpu_move = board[row][column]
-  victory_for(board, xis)
 
   input(f"O computador vai jogar na posição [{cpu_move}]!\nContinuar > [ENTER]")
+
   # Actually registers the computer move
   board[row][column] = xis
-  #enter_move(board)
 
 
 # The function accepts the board's current status, asks the user about their 
@@ -97,20 +96,24 @@ def enter_move(board):
         input(f"{prefixo_erro}{erro_posicao_incorreta}\n{enter_para_continuar}")
         continue
       else: ### Se o número existir, associa à variável 'move' a posição escolhida
-        if user_input >= 1 and user_input <= 3:
+        if user_input in board[0]:
           move_address = [0, user_input-1]
-        elif user_input >= 4 and user_input <= 6:
+        elif user_input in board[1]:
           move_address = [1, user_input-4]
-        elif user_input >= 7 and user_input <= 9:
+        elif user_input in board[2]:
           move_address = [2, user_input-7]
 
-      move = board[ move_address[0] ][ move_address[1] ]
+      row = move_address[0]
+      column = move_address[1]
 
-      if move == xis or move == circulo:
+      move = board[row][column]
+
+      if move in [xis, circulo]:
         input(f"{prefixo_erro}Choose a field not yet used!\n{enter_para_continuar}")
         continue
       else:
-        board[move_address[0]][move_address[1]] = circulo
+        # Register the player move
+        board[row][column] = circulo
         break
 
     except ValueError:
@@ -203,9 +206,6 @@ def victory_for(board, sign):
 #    # verificações horizontais
 #    #for i in range
 #
-
-## The function analyzes the board's status in order to check if 
-## the player using 'O's or 'X's has won the game
 
 
 def main():
