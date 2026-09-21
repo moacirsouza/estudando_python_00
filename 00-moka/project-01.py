@@ -36,7 +36,7 @@ def display_board(board):
   l2 = "    {0}   |   {1}   |   {2}"
   l3 = " -------+-------+-------"
 
-  for i in range(3):
+  for i in range(len(board)):
     a, b, c = board[i]
 
     if i != 1:
@@ -121,8 +121,6 @@ def enter_move(board):
     except:
       input(f"\n{prefixo_erro}Unknown error. Please read the instructions.\n{enter_para_continuar}")
 
-  #victory_for(board, circulo)
-  #draw_move( board )
 
 # The function analyzes the board's status in order to check if 
 # the player using 'O's or 'X's has won the game
