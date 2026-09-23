@@ -1,12 +1,8 @@
-from os import system, name
+import os
 from random import randrange
 
 xis = '✘'
 circulo = '◯'
-
-### Variáveis com as mensagens de tratamento de erros e/ou alertas para o 
-### usuário
-prefixo_aviso="WARNING: "
 
 board = [
           [1, 2, 3],
@@ -61,13 +57,14 @@ def message_handler(function_name, extra_parameters=""):
   if will_return:
     return registered_return 
 
+
 # Clears the screen, using the appropriate command, according to the operating 
 # system type
 def clear_screen():
-  if name == "nt":
-    _ = system("cls")
+  if os.name == "nt":
+    os.system("cls")
   else:
-    _ = system("clear")
+    os.system("clear")
 
 
 # The function accepts one parameter containing the board's current status and 
