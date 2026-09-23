@@ -6,10 +6,7 @@ circulo = '◯'
 
 ### Variáveis com as mensagens de tratamento de erros e/ou alertas para o 
 ### usuário
-prefixo_erro="ERROR: "
 prefixo_aviso="WARNING: "
-erro_posicao_incorreta="The value must be between 1 and 9. Try again!"
-enter_para_continuar="[Press ENTER to CONTINUE]"
 
 board = [
           [1, 2, 3],
@@ -17,6 +14,52 @@ board = [
           [7, 8, 9]
         ]
 
+def message_handler(function_name, extra_parameters=""):
+  prefix = ""
+  action_prompt = "\n[Press ENTER to CONTINUE] "
+  will_return = False
+
+  match function_name:
+    case 'draw_move':
+      message_body = f"O computador vai jogar na posição [{extra_parameters}]!"
+
+    case 'enter_move':
+      match extra_parameters:
+        case 0:
+          message_body = "Escolha sua jogada: "
+          action_prompt = ""
+          will_return = True
+
+        case 1:
+          prefix = "WARNING: "
+          message_body = "The value must be between 1 and 9."
+        
+        case 2:
+          prefix = "WARNING: "
+          message_body = "Choose a field not yet used!"
+
+        case 3:
+          prefix = "ERROR: "
+          message_body = "You must choose an integer number!"
+
+        case 4:
+          prefix = "ERROR: "
+          message_body = "Unknown error. Please read the instructions!"
+    
+    case 'victory_for':
+      prefix = "FIM DE JOGO!\n"
+      action_prompt = "\nPressione [ENTER] para sair!"
+
+      match extra_parameters:
+        case 1:
+          message_body = "O jogo empatou!"
+        case _:
+          message_body = f"O {extra_parameters} venceu!"
+
+  registered_return = input(f"{prefix}{message_body}{action_prompt}")
+
+  if will_return:
+    return registered_return 
 
 # Clears the screen, using the appropriate command, according to the operating 
 # system type
@@ -73,7 +116,7 @@ def draw_move(board):
   # value to the user BEFORE actually registering it to the board
   cpu_move = board[row][column]
 
-  input(f"O computador vai jogar na posição [{cpu_move}]!\nContinuar > [ENTER]")
+  message_handler('draw_move', cpu_move)
 
   # Actually registers the computer move
   board[row][column] = xis
@@ -89,27 +132,31 @@ def enter_move(board):
   while True:
     display_board(board)
     try:
-      user_input = int(input("Enter your move: "))
+      #user_input = int(input("Enter your move: "))
+      
+      user_input = int(message_handler('enter_move', 0))
 
       ### Valida se o usuário digitou um número que existe no tabuleiro
       if user_input < primeira_celula or user_input > ultima_celula:
-        input(f"{prefixo_erro}{erro_posicao_incorreta}\n{enter_para_continuar}")
+        message_handler('enter_move', 1)
         continue
       else: ### Se o número existir, associa à variável 'move' a posição escolhida
-        if user_input in board[0]:
-          move_address = [0, user_input-1]
-        elif user_input in board[1]:
-          move_address = [1, user_input-4]
-        elif user_input in board[2]:
-          move_address = [2, user_input-7]
+        if user_input in range(1, 4):
+          row = 0
+          offset = 1
+        elif user_input in range(4, 7):
+          row = 1
+          offset = 4
+        elif user_input in range(7, 10):
+          row = 2
+          offset = 7
 
-      row = move_address[0]
-      column = move_address[1]
+        column = user_input - offset
 
       move = board[row][column]
 
       if move in [xis, circulo]:
-        input(f"{prefixo_erro}Choose a field not yet used!\n{enter_para_continuar}")
+        message_handler('enter_move', 2)
         continue
       else:
         # Register the player move
@@ -117,9 +164,9 @@ def enter_move(board):
         break
 
     except ValueError:
-      input(f"{prefixo_erro}You must choose an integer number!\n{enter_para_continuar}")
+      message_handler('enter_move', 3)
     except:
-      input(f"\n{prefixo_erro}Unknown error. Please read the instructions.\n{enter_para_continuar}")
+      message_handler('enter_move', 4)
 
 
 # The function analyzes the board's status in order to check if 
@@ -179,11 +226,11 @@ def victory_for(board, sign):
     vencedor = None
 
   if vencedor != None:
-    input(f"O {vencedor} venceu!\nPressione [ENTER] para sair!")
+    message_handler("victory_for", vencedor)
     exit()
 
   if len(make_list_of_free_fields(board)) == 0:
-    input(f"O jogo empatou!\nPressione [ENTER] para sair!")
+    message_handler("victory_for", 1)
     exit()
 
 
