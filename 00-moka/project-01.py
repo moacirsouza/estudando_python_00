@@ -176,29 +176,64 @@ def victory_for(board, sign):
   resultado_circulo = [venceu_horizontal, venceu_vertical]
   resultado_xis = [venceu_horizontal, venceu_vertical]
 
-  # Validação de vitória na HORIZONTAL
-  for row in board:
-    contador = 0
-    for cell in row:
-      if cell != sign:
-        break
-      contador += 1
+  for row in range(3):
+    row_counter = 0
+    column_counter = 0
 
-    if contador == 3:
+    for column in range(3):
+      if board[row][column] != sign:
+        row_counter = 0
+      row_counter += 1
+      
+      if board[column][row] != sign:
+        column_counter = 0
+      column_counter += 1
+
+      # Hipóstese: Se os dois contadores permanecerem 
+      # zero, significa que o símbolo NÃO PODE vencer
+      # nem na vertical, nem na horizontal!
+      #if row_counter == 0 and column_counter == 0:
+      #  break
+
+    if row_counter == 3:
+      print('row')
       venceu_horizontal = True
       break
 
-  # Validação de vitória na VERTICAL
-  for row in range(3):
-    contador = 0
-    for column in range(3):
-      if board[column][row] != sign:
-        break
-      contador += 1
-
-    if contador == 3:
+    if column_counter == 3:
+      print('col')
       venceu_vertical = True
       break
+
+       # print(board[i][j], end=" ")
+      #print("vert", circulo_venceu_vertical)
+      #if board[j][i] != circulo:
+      #  #print(board[j][i], end=" ")
+      #  circulo_venceu_vertical = False
+
+#  # Validação de vitória na HORIZONTAL
+#  for row in board:
+#    contador = 0
+#    for cell in row:
+#      if cell != sign:
+#        break
+#      contador += 1
+#
+#    if contador == 3:
+#      venceu_horizontal = True
+#      break
+#
+#  # Validação de vitória na VERTICAL
+#  for row in range(3):
+#    contador = 0
+#    for column in range(3):
+#      if board[column][row] != sign:
+#        break
+#      contador += 1
+#
+#    if contador == 3:
+#      venceu_vertical = True
+#      break
 
   if sign == circulo:
     resultado_circulo = [venceu_horizontal, venceu_vertical]
@@ -222,10 +257,12 @@ def victory_for(board, sign):
   else:
     vencedor = None
 
+  # Someone won
   if vencedor != None:
     message_handler("victory_for", vencedor)
     exit()
 
+  # A draw happened
   if len(make_list_of_free_fields(board)) == 0:
     message_handler("victory_for", 1)
     exit()
@@ -244,10 +281,6 @@ def victory_for(board, sign):
 #        #if board[j][i] != circulo:
 #        #  #print(board[j][i], end=" ")
 #        #  circulo_venceu_vertical = False
-#
-#    # verificações horizontais
-#    #for i in range
-#
 
 
 def main():
