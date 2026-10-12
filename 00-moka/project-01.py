@@ -1,30 +1,31 @@
 import os
 from random import randrange
 
-xis = '✘'
-circulo = '◯'
+computer_sign = '✘'
+player_sign = '◯'
 
 board = [
           [1, 2, 3],
-          [4, xis, 6],
+          [4, computer_sign, 6],
           [7, 8, 9]
         ]
 
 
+# Centralises all the messages the user may receive from the program.
 def message_handler(function_name, extra_parameters = None):
   prefix = ""
-  action_prompt = "\n[Press ENTER to CONTINUE] "
+  action_prompt = "\nPress [ENTER] to CONTINUE "
   will_return = False
   message_body = ""
 
   match function_name:
     case 'draw_move':
-      message_body = f"O computador vai jogar na posição [{extra_parameters}]!"
+      message_body = f"The computer will play at cell [{extra_parameters}]!"
 
     case 'enter_move':
       match extra_parameters:
         case 0:
-          message_body = "Escolha sua jogada: "
+          message_body = "Your next move: "
           action_prompt = ""
           will_return = True
 
@@ -33,7 +34,7 @@ def message_handler(function_name, extra_parameters = None):
           message_body = "The value must be between 1 and 9."
         
         case 2:
-          prefix = "WARNING: "
+          prefix = "WRONG MOVE: "
           message_body = "Choose a field not yet used!"
 
         case 3:
@@ -45,14 +46,14 @@ def message_handler(function_name, extra_parameters = None):
           message_body = "Unknown error. Please read the instructions!"
     
     case 'victory_for':
-      prefix = "FIM DE JOGO!\n"
-      action_prompt = "\nPressione [ENTER] para sair!"
+      prefix = "GAME OVER!\n"
+      action_prompt = "\nPress [ENTER] to exit!"
 
       match extra_parameters:
         case 1:
-          message_body = "O jogo empatou!"
+          message_body = "It's a DRAW!"
         case _:
-          message_body = f"O {extra_parameters} venceu!"
+          message_body = f"Winner: {extra_parameters}!"
 
   registered_return = input(f"{prefix}{message_body}{action_prompt}")
 
@@ -60,8 +61,8 @@ def message_handler(function_name, extra_parameters = None):
     return registered_return 
 
 
-# Clears the screen, using the appropriate command, according to the operating 
-# system type
+# Clears the screen using the appropriate command, according to the operating 
+# system type.
 def clear_screen():
   if os.name == "nt":
     os.system("cls")
@@ -87,8 +88,8 @@ def display_board(board):
       print(l3, l1, l2.format(a, b, c), l1, l3, sep="\n")
 
 
-# The function browses the board and builds a list of all the free squares; the 
-# list consists of tuples, while each tuple is a pair of row and column 
+# The function browses the board and builds a list of all the free squares; 
+# the list consists of tuples, while each tuple is a pair of row and column 
 # numbers.
 def make_list_of_free_fields(board):
   free_fields = []
@@ -111,30 +112,27 @@ def draw_move(board):
   row = possible_moves[next_move][0]
   column = possible_moves[next_move][1]
 
-  # Stores the position of the computer move. This will be used to display the 
-  # value to the user BEFORE actually registering it to the board
+  # Stores computer's next move. This will be used to display the cell address 
+  # to the user BEFORE actually registering it to the board
   cpu_move = board[row][column]
 
   message_handler('draw_move', cpu_move)
 
   # Actually registers the computer move
-  board[row][column] = xis
+  board[row][column] = computer_sign
 
 
 # The function accepts the board's current status, asks the user about their 
 # move, checks the input, and updates the board according to the user's 
 # decision.
 def enter_move(board):
-  primeira_celula = 1
-  ultima_celula = 9
 
   while True:
     display_board(board)
     try:
       user_input = int(message_handler('enter_move', 0))
 
-      ### Valida se o usuário digitou um número que existe no tabuleiro
-      if user_input < primeira_celula or user_input > ultima_celula:
+      if user_input < 1 or user_input > 9:
         message_handler('enter_move', 1)
         continue
       else:
@@ -154,12 +152,12 @@ def enter_move(board):
 
       move = board[row][column]
 
-      if move in [xis, circulo]:
+      if move in [computer_sign, player_sign]:
         message_handler('enter_move', 2)
         continue
       else:
         # Register the player move
-        board[row][column] = circulo
+        board[row][column] = player_sign
         break
 
     except ValueError:
@@ -173,10 +171,10 @@ def enter_move(board):
 def victory_for(board, sign):
 
   display_board(board)
-  venceu_vertical = False
-  venceu_horizontal = False
-  resultado_circulo = [venceu_horizontal, venceu_vertical]
-  resultado_xis = [venceu_horizontal, venceu_vertical]
+  won_in_vertical = False
+  won_in_horizontal = False
+  player_sign_results = [won_in_horizontal, won_in_vertical]
+  computer_sign_results = [won_in_horizontal, won_in_vertical]
 
   for row in range(3):
     row_counter = 0
@@ -200,38 +198,38 @@ def victory_for(board, sign):
         break
 
     if row_counter == 3:
-      venceu_horizontal = True
+      won_in_horizontal = True
       break
 
     if column_counter == 3:
-      venceu_vertical = True
+      won_in_vertical = True
       break
 
-  if sign == circulo:
-    resultado_circulo = [venceu_horizontal, venceu_vertical]
-  elif sign == xis:
-    resultado_xis = [venceu_horizontal, venceu_vertical]
+  if sign == player_sign:
+    player_sign_results = [won_in_horizontal, won_in_vertical]
+  elif sign == computer_sign:
+    computer_sign_results = [won_in_horizontal, won_in_vertical]
 
-    # Validação de vitória nas DIAGONAIS
-    # Diagonal principal:  (0, 0), (1, 1), (2, 2)
-    # Diagonal secundária: (0, 2), (1, 1), (2, 0)
-    if (board[0][0] == xis and board[2][2] == xis) or\
-       (board[0][2] == xis and board[2][0] == xis):
-      resultado_xis = [True, True]
+    # Validates the DIAGONALS wins
+    # Main diagonal:  (0, 0), (1, 1), (2, 2)
+    # Secondary diagonal: (0, 2), (1, 1), (2, 0)
+    if (board[0][0] == computer_sign and board[2][2] == computer_sign) or\
+       (board[0][2] == computer_sign and board[2][0] == computer_sign):
+      computer_sign_results = [True, True]
   else:
-    print(f"O parâmetro {sign} não é reconhecido pelo programa")
-    print("Verifique a chamada da função victory_for() e tente novamente")
+    print(f"The parameter {sign} is not recognised by the program")
+    print("Plase, check the function 'victory_for()' and try again")
 
-  if True in resultado_circulo:
-    vencedor = "jogador"
-  elif True in resultado_xis:
-    vencedor = "computador"
+  if True in player_sign_results:
+    winner = "Player"
+  elif True in computer_sign_results:
+    winner = "Computer"
   else:
-    vencedor = None
+    winner = None
 
   # Someone won
-  if vencedor != None:
-    message_handler("victory_for", vencedor)
+  if winner != None:
+    message_handler("victory_for", winner)
     exit()
 
   # A draw happened
@@ -243,9 +241,9 @@ def victory_for(board, sign):
 def main():
   while True:
     enter_move(board)
-    victory_for(board, circulo)
+    victory_for(board, player_sign)
     draw_move(board)
-    victory_for(board, xis)
+    victory_for(board, computer_sign)
 
 
 main()
