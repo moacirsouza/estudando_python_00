@@ -10,10 +10,12 @@ board = [
           [7, 8, 9]
         ]
 
-def message_handler(function_name, extra_parameters=""):
+
+def message_handler(function_name, extra_parameters = None):
   prefix = ""
   action_prompt = "\n[Press ENTER to CONTINUE] "
   will_return = False
+  message_body = ""
 
   match function_name:
     case 'draw_move':
@@ -129,15 +131,15 @@ def enter_move(board):
   while True:
     display_board(board)
     try:
-      #user_input = int(input("Enter your move: "))
-      
       user_input = int(message_handler('enter_move', 0))
 
       ### Valida se o usuário digitou um número que existe no tabuleiro
       if user_input < primeira_celula or user_input > ultima_celula:
         message_handler('enter_move', 1)
         continue
-      else: ### Se o número existir, associa à variável 'move' a posição escolhida
+      else:
+        row = -1
+        offset = -1
         if user_input in range(1, 4):
           row = 0
           offset = 1
@@ -183,57 +185,27 @@ def victory_for(board, sign):
     for column in range(3):
       if board[row][column] != sign:
         row_counter = 0
-      row_counter += 1
+      else:
+        row_counter += 1
       
       if board[column][row] != sign:
         column_counter = 0
-      column_counter += 1
+      else:
+        column_counter += 1
 
       # Hipóstese: Se os dois contadores permanecerem 
       # zero, significa que o símbolo NÃO PODE vencer
       # nem na vertical, nem na horizontal!
-      #if row_counter == 0 and column_counter == 0:
-      #  break
+      if row_counter == 0 and column_counter == 0:
+        break
 
     if row_counter == 3:
-      print('row')
       venceu_horizontal = True
       break
 
     if column_counter == 3:
-      print('col')
       venceu_vertical = True
       break
-
-       # print(board[i][j], end=" ")
-      #print("vert", circulo_venceu_vertical)
-      #if board[j][i] != circulo:
-      #  #print(board[j][i], end=" ")
-      #  circulo_venceu_vertical = False
-
-#  # Validação de vitória na HORIZONTAL
-#  for row in board:
-#    contador = 0
-#    for cell in row:
-#      if cell != sign:
-#        break
-#      contador += 1
-#
-#    if contador == 3:
-#      venceu_horizontal = True
-#      break
-#
-#  # Validação de vitória na VERTICAL
-#  for row in range(3):
-#    contador = 0
-#    for column in range(3):
-#      if board[column][row] != sign:
-#        break
-#      contador += 1
-#
-#    if contador == 3:
-#      venceu_vertical = True
-#      break
 
   if sign == circulo:
     resultado_circulo = [venceu_horizontal, venceu_vertical]
@@ -266,21 +238,6 @@ def victory_for(board, sign):
   if len(make_list_of_free_fields(board)) == 0:
     message_handler("victory_for", 1)
     exit()
-
-
-#    # verificações verticais
-#    for i in range(0, 3, 2): # Checks only first and last rows (indices 0 and 2)
-#      circulo_venceu_horizontal = True
-#      for j in range(3):
-#        if board[i][j] != circulo:
-#          print(board[i][j], end=" ")
-#          circulo_venceu_horizontal = False
-#          break
-#        
-#        #print("vert", circulo_venceu_vertical)
-#        #if board[j][i] != circulo:
-#        #  #print(board[j][i], end=" ")
-#        #  circulo_venceu_vertical = False
 
 
 def main():
